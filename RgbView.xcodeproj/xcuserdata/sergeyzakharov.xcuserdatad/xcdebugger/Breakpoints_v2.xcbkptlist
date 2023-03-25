@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "12D664F4-1933-4FFD-A994-D07E2A77BAF8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D043ECDA-99F7-43FE-8106-4BB40C55B671"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RgbView/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D043ECDA-99F7-43FE-8106-4BB40C55B671 - 3f9a5919fb7c14a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RgbView.ViewController.greenSlider.getter : Swift.Optional&lt;__C.UISlider&gt;"
+                  moduleName = "RgbView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeyzakharov/Desktop/RgbView/RgbView/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "D043ECDA-99F7-43FE-8106-4BB40C55B671 - 9f6d007a4236d0bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RgbView.ViewController.greenSlider.setter : Swift.Optional&lt;__C.UISlider&gt;"
+                  moduleName = "RgbView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeyzakharov/Desktop/RgbView/RgbView/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "D043ECDA-99F7-43FE-8106-4BB40C55B671 - e6d81a463d89f5a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RgbView.ViewController.greenSlider.modify : Swift.Optional&lt;__C.UISlider&gt;"
+                  moduleName = "RgbView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeyzakharov/Desktop/RgbView/RgbView/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D043ECDA-99F7-43FE-8106-4BB40C55B671 - acf6b284f8343c26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RgbView.ViewController.greenSlider.modify : Swift.Optional&lt;__C.UISlider&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RgbView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeyzakharov/Desktop/RgbView/RgbView/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "D043ECDA-99F7-43FE-8106-4BB40C55B671 - da13e21608bc9ca6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RgbView.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RgbView.ViewController"
+                  moduleName = "RgbView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeyzakharov/Desktop/RgbView/RgbView/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "D043ECDA-99F7-43FE-8106-4BB40C55B671 - a9cdf9871edd5dd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RgbView.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RgbView.ViewController&gt;"
+                  moduleName = "RgbView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeyzakharov/Desktop/RgbView/RgbView/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
