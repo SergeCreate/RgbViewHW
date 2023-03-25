@@ -23,11 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
-        
-        redLabel.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
-        greenLabel.text = greenSlider.value.formatted(.number.precision(.fractionLength(2)))
-        blueLabel.text = blueSlider.value.formatted(.number.precision(.fractionLength(2)))
+        redSlider(redLabel.text as Any)
+        greenSlider(greenLabel.text as Any)
+        blueSlider(greenLabel.text as Any)
     }
     
     private func changeColor() {
