@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         redSlider(redLabel.text as Any)
         greenSlider(greenLabel.text as Any)
-        blueSlider(greenLabel.text as Any)
+        blueSlider(blueLabel.text as Any)
     }
     
     private func changeColor() {
