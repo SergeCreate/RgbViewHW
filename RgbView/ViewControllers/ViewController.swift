@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol ColorDelegate: AnyObject {
+    func didChangeColor(_ color: UIColor)
+}
+
+final class ViewController: UIViewController {
     
     @IBOutlet var coloredView: UIView!
     
@@ -19,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
+    weak var colorDelegate: ColorDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +34,6 @@ class ViewController: UIViewController {
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
         blueLabel.text = string(from: blueSlider)
-        
     }
     
     
@@ -44,18 +49,32 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        colorDelegate?.didChangeColor(coloredView.backgroundColor ?? .white)
+        dismiss(animated: true)
+    }
+    
+    
+ 
     private func changeColor() {
-        coloredView.backgroundColor = UIColor(
+        let color = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
+        coloredView.backgroundColor = color
+        colorDelegate?.didChangeColor(color)
     }
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
 }
+
+
+
+
+
 
 

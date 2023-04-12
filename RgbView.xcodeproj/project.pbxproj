@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7705FC29E6FB65003C804A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7705FB29E6FB65003C804A /* MainViewController.swift */; };
 		4BE3F1A729CF6E3000969B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE3F1A629CF6E3000969B5F /* AppDelegate.swift */; };
 		4BE3F1A929CF6E3000969B5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE3F1A829CF6E3000969B5F /* SceneDelegate.swift */; };
 		4BE3F1AB29CF6E3000969B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE3F1AA29CF6E3000969B5F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B7705FB29E6FB65003C804A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4BE3F1A329CF6E3000969B5F /* RgbView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RgbView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE3F1A629CF6E3000969B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE3F1A829CF6E3000969B5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B7705F329E6E7AA003C804A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4BE3F1AC29CF6E3000969B5F /* Main.storyboard */,
+				4BE3F1B129CF6E3100969B5F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4B7705F429E6E7CE003C804A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4BE3F1A829CF6E3000969B5F /* SceneDelegate.swift */,
+				4BE3F1A629CF6E3000969B5F /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4B7705F529E6E802003C804A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BE3F1AA29CF6E3000969B5F /* ViewController.swift */,
+				4B7705FB29E6FB65003C804A /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4BE3F19A29CF6E3000969B5F = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +85,11 @@
 		4BE3F1A529CF6E3000969B5F /* RgbView */ = {
 			isa = PBXGroup;
 			children = (
-				4BE3F1A629CF6E3000969B5F /* AppDelegate.swift */,
-				4BE3F1A829CF6E3000969B5F /* SceneDelegate.swift */,
-				4BE3F1AA29CF6E3000969B5F /* ViewController.swift */,
-				4BE3F1AC29CF6E3000969B5F /* Main.storyboard */,
-				4BE3F1AF29CF6E3100969B5F /* Assets.xcassets */,
-				4BE3F1B129CF6E3100969B5F /* LaunchScreen.storyboard */,
 				4BE3F1B429CF6E3100969B5F /* Info.plist */,
+				4BE3F1AF29CF6E3100969B5F /* Assets.xcassets */,
+				4B7705F529E6E802003C804A /* ViewControllers */,
+				4B7705F329E6E7AA003C804A /* Storyboards */,
+				4B7705F429E6E7CE003C804A /* App */,
 			);
 			path = RgbView;
 			sourceTree = "<group>";
@@ -141,6 +168,7 @@
 				4BE3F1AB29CF6E3000969B5F /* ViewController.swift in Sources */,
 				4BE3F1A729CF6E3000969B5F /* AppDelegate.swift in Sources */,
 				4BE3F1A929CF6E3000969B5F /* SceneDelegate.swift in Sources */,
+				4B7705FC29E6FB65003C804A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
