@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol ColorDelegate: AnyObject {
-    func didChangeColor(_ color: UIColor)
-}
-
 final class ViewController: UIViewController {
     
     @IBOutlet var coloredView: UIView!
@@ -25,11 +21,14 @@ final class ViewController: UIViewController {
     
     weak var colorDelegate: ColorDelegate?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         coloredView.layer.cornerRadius = 15
         changeColor()
+        
+        redSlider.value = UserDefaults.standard.float(forKey: "redSliderValue")
+        greenSlider.value = UserDefaults.standard.float(forKey: "greenSliderValue")
+        blueSlider.value = UserDefaults.standard.float(forKey: "blueSliderValue")
         
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
@@ -42,10 +41,13 @@ final class ViewController: UIViewController {
         switch sender {
         case redSlider:
             redLabel.text = string(from: redSlider)
+            UserDefaults.standard.set(redSlider.value, forKey: "redSliderValue")
         case greenSlider:
             greenLabel.text = string(from: greenSlider)
+            UserDefaults.standard.set(greenSlider.value, forKey: "greenSliderValue")
         default :
             blueLabel.text = string(from: blueSlider)
+            UserDefaults.standard.set(blueSlider.value, forKey: "bluSliderValue")
         }
     }
     
@@ -54,8 +56,6 @@ final class ViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    
- 
     private func changeColor() {
         let color = UIColor(
             red: CGFloat(redSlider.value),
@@ -70,6 +70,10 @@ final class ViewController: UIViewController {
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
+}
+
+protocol ColorDelegate: AnyObject {
+    func didChangeColor(_ color: UIColor)
 }
 
 
