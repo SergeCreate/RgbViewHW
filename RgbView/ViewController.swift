@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coloredView.layer.cornerRadius = 15
+        
         redSlider(redLabel.text as Any)
         greenSlider(greenLabel.text as Any)
         blueSlider(blueLabel.text as Any)
