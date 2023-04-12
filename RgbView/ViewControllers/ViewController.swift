@@ -52,7 +52,7 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
-        colorDelegate?.didChangeColor(coloredView.backgroundColor ?? .white)
+        colorDelegate?.didChangeColor(coloredView.backgroundColor ?? UIColor.clear)
         dismiss(animated: true)
     }
     
