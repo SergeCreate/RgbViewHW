@@ -83,20 +83,20 @@
                                         <rect key="frame" x="-2" y="0.0" width="205.5" height="31"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <connections>
-                                            <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="b5a-y9-6fU"/>
+                                            <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="00V-ny-hB7"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Rj-vl-SI2">
                                         <rect key="frame" x="-2" y="41" width="205.5" height="31"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <connections>
-                                            <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="AIl-tW-j8g"/>
+                                            <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="UHE-OQ-6Ms"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Pg-am-nbb">
                                         <rect key="frame" x="-2" y="82" width="205.5" height="31"/>
                                         <connections>
-                                            <action selector="blueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="p3q-AI-aEy"/>
+                                            <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="7PF-LL-WzJ"/>
                                         </connections>
                                     </slider>
                                 </subviews>

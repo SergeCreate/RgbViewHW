@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var coloredView: UIView!
     
     @IBOutlet var redSlider: UISlider!
@@ -22,12 +22,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         coloredView.layer.cornerRadius = 15
+        changeColor()
         
-        redSlider(redLabel.text as Any)
-        greenSlider(greenLabel.text as Any)
-        blueSlider(blueLabel.text as Any)
+        redLabel.text = string(from: redSlider)
+        greenLabel.text = string(from: greenSlider)
+        blueLabel.text = string(from: blueSlider)
+        
+    }
+    
+    
+    @IBAction func sliderAction(_ sender: UISlider) {
+        changeColor()
+        switch sender {
+        case redSlider:
+            redLabel.text = string(from: redSlider)
+        case greenSlider:
+            greenLabel.text = string(from: greenSlider)
+        default :
+            blueLabel.text = string(from: blueSlider)
+        }
     }
     
     private func changeColor() {
@@ -39,20 +53,9 @@ class ViewController: UIViewController {
         )
     }
     
-
-    @IBAction func redSlider(_ sender: Any) {
-        changeColor()
-        redLabel.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
-    }
-    
-    @IBAction func greenSlider(_ sender: Any) {
-        changeColor()
-        greenLabel.text = greenSlider.value.formatted(.number.precision(.fractionLength(2)))
-    }
-    
-    @IBAction func blueSlider(_ sender: Any) {
-        changeColor()
-        blueLabel.text = blueSlider.value.formatted(.number.precision(.fractionLength(2)))
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
+
 
