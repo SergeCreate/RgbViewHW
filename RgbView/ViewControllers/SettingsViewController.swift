@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class SettingsViewController: UIViewController {
     
     @IBOutlet var coloredView: UIView!
     
@@ -19,16 +19,14 @@ final class ViewController: UIViewController {
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    weak var colorDelegate: ColorDelegate?
+    unowned var delegate: SettingsViewControllerDelegate!
+    var viewColor: UIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         coloredView.layer.cornerRadius = 15
-        changeColor()
         
-        redSlider.value = UserDefaults.standard.float(forKey: "redSliderValue")
-        greenSlider.value = UserDefaults.standard.float(forKey: "greenSliderValue")
-        blueSlider.value = UserDefaults.standard.float(forKey: "blueSliderValue")
+        coloredView.backgroundColor = viewColor
         
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
@@ -40,41 +38,56 @@ final class ViewController: UIViewController {
         changeColor()
         switch sender {
         case redSlider:
-            redLabel.text = string(from: redSlider)
-            UserDefaults.standard.set(redSlider.value, forKey: "redSliderValue")
+            setValue(for: redLabel)
         case greenSlider:
-            greenLabel.text = string(from: greenSlider)
-            UserDefaults.standard.set(greenSlider.value, forKey: "greenSliderValue")
+            setValue(for: greenLabel)
         default :
-            blueLabel.text = string(from: blueSlider)
-            UserDefaults.standard.set(blueSlider.value, forKey: "bluSliderValue")
+            setValue(for: blueLabel)
         }
+        
+        changeColor()
     }
     
-    @IBAction func doneButtonPressed(_ sender: UIButton) {
-        colorDelegate?.didChangeColor(coloredView.backgroundColor ?? UIColor.clear)
+    @IBAction func doneButtonPressed() {
+        delegate.changeColor(coloredView.backgroundColor ?? .white)
         dismiss(animated: true)
     }
     
     private func changeColor() {
-        let color = UIColor(
+        coloredView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
-        coloredView.backgroundColor = color
-        colorDelegate?.didChangeColor(color)
     }
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
+    
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redLabel: label.text = string(from: redSlider)
+            case greenLabel: label.text = string(from: greenSlider)
+            default: label.text = string(from: blueSlider)
+            }
+        }
+    }
+    
+    private func setValue(for colorSliders: UISlider...) {
+        let ciColor = CIColor(color: viewColor)
+        colorSliders.forEach { slider in
+            switch slider {
+            case redSlider : redSlider.value = Float(ciColor.red)
+            case greenSlider: greenSlider.value = Float(ciColor.green)
+            default: blueSlider.value = Float(ciColor.blue)
+            }
+        }
+    }
 }
 
-protocol ColorDelegate: AnyObject {
-    func didChangeColor(_ color: UIColor)
-}
 
 
 
