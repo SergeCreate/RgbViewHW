@@ -53,6 +53,7 @@
 			children = (
 				4BE3F1A829CF6E3000969B5F /* SceneDelegate.swift */,
 				4BE3F1A629CF6E3000969B5F /* AppDelegate.swift */,
+				4BE3F1B429CF6E3100969B5F /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -85,7 +86,6 @@
 		4BE3F1A529CF6E3000969B5F /* RgbView */ = {
 			isa = PBXGroup;
 			children = (
-				4BE3F1B429CF6E3100969B5F /* Info.plist */,
 				4BE3F1AF29CF6E3100969B5F /* Assets.xcassets */,
 				4B7705F529E6E802003C804A /* ViewControllers */,
 				4B7705F329E6E7AA003C804A /* Storyboards */,
@@ -317,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73AU25U66T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RgbView/Info.plist;
+				INFOPLIST_FILE = RgbView/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ColorizedApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -349,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73AU25U66T;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RgbView/Info.plist;
+				INFOPLIST_FILE = RgbView/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ColorizedApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
